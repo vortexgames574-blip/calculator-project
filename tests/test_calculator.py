@@ -2,8 +2,10 @@
 import unittest
 import sys
 import os
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.calculator import add, subtract, multiply, divide
+from src.calculator import add, subtract, multiply, divide  # noqa: E402
+
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
@@ -20,6 +22,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(divide(15, 3), 5)
         with self.assertRaises(ValueError):
             divide(1, 0)
+
 
 if __name__ == "__main__":
     unittest.main()

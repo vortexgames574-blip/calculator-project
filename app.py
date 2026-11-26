@@ -13,6 +13,7 @@ OPS = {
     "mod": modulo,
 }
 
+
 @app.route("/")
 def index():
     return (
@@ -20,6 +21,7 @@ def index():
         "<p>Пример: <a href='/calc?op=add&a=2&b=3'>/calc?op=add&a=2&b=3</a></p>"
         "<p>Доступные op: add, sub, mul, div, pow, mod</p>"
     )
+
 
 @app.route("/calc")
 def calc():
@@ -36,6 +38,7 @@ def calc():
         return jsonify({"op": op, "a": a, "b": b, "result": result})
     except (ValueError, NotImplementedError) as e:
         return jsonify({"error": str(e)}), 400
+
 
 if __name__ == "__main__":
     app.run(debug=True)
