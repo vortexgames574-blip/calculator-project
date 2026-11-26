@@ -1,0 +1,13 @@
+UML-диаграмма классов (текстовое описание):
+
+Calculator
+├── add(a, b)
+├── subtract(a, b)
+├── multiply(a, b)
+├── divide(a, b)
+├── power(a, b)
+└── modulo(a, b)
+
+FlaskApp (app.py)
+├── index()
+└── calc(op, a, b) → использует Calculator

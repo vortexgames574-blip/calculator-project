@@ -1,0 +1,26 @@
+# Байт-код Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# Временные файлы сборки
+build/
+dist/
+*.egg-info/
+
+# Логи
+*.log
+
+# Файлы IDE
+.vscode/
+.idea/
+*.swp
+
+# ОС
+.DS_Store
+Thumbs.db
